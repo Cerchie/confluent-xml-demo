@@ -23,7 +23,7 @@ You'll see the live results of your query in XML!
 Now, run this command. The `'.stations.station[] + {lastUpdate: .stations."@lastUpdate"}'` bit will create a JSON structure. 
 
 ```bash
-curl --show-error --silent https://tfl.gov.uk/tfl/syndication/feeds/cycle-hire/livecyclehireupdates.xml | \                                                 xq -c '.stations.station[] + {lastUpdate: .stations."@lastUpdate"}'
+curl --show-error --silent https://tfl.gov.uk/tfl/syndication/feeds/cycle-hire/livecyclehireupdates.xml | xq -c '.stations.station[] + {lastUpdate: .stations."@lastUpdate"}'
 ```
 
 The output will be in the following format: 
